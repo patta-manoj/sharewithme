@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&family=Ubuntu&display=swap');
+
+.my-files-container{
+    position: relative;
+    display: flex;
+    padding: 1rem 2rem 1rem 3rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    place-content: center;
+    z-index: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.card-container{
+    position: relative;
+    z-index: 1;
+    display: grid;
+    width: 400px;
+    margin: 10px;
+    scale: 0.98;
+    transition: scale 100ms ease-in;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+}
+
+.card-data-myfiles{
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30%;
+}
+
+.card-data-myfiles span{
+    font-weight: 700;
+    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    user-select: none;
+}
+
+
+.card-container:hover{
+    scale: 1;
+}
+
+@media screen and (width<768px) {
+    .card-container{
+        width: 300px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (width<568px) {
+    .card-container{
+        font-size: 16px;
+    }
+
+    .my-files-container{
+        overflow-x: auto;
+        padding: 1rem 1rem 1rem 3rem;
+        place-items: calc(50% , 50%);
+    }
+}

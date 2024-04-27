@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap');
+
+.share-file-container-3{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    height: auto;
+    width: auto;
+    overflow-wrap: break-word;
+}
+
+.dialogbox-footer{
+    font-size: 2px;
+    margin-top: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.file-share-card{
+    user-select: none;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: grid;
+    grid-template-areas: 'head head head'
+                        'body body body'
+                        'body body body';
+    overflow-wrap: break-word;
+    min-width: 40vw;
+}
+
+.file-share-head-bar{
+    text-transform: uppercase;
+    padding: 0.5em;
+    display: flex;
+    grid-area: head;
+    background-color: #4285f4;
+    gap:4rem;
+    color: white;
+    border-radius: 5px 5px 0 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.username-dialog-box{
+    width: 50vw;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 20px;
+}
+
+.file-upload-btn{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width:900px ) and (max-width:1200px){
+    .username-dialog-box{
+        width: 70vw;
+        max-height: 70vh;
+        font-size: 22px;
+    }
+}
+
+@media screen and (width<900px) {
+    .username-dialog-box{
+        width: 90vw;
+        font-size: 22px;
+        max-height: 70vh;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .password-dialog{
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .file-share-card{
+        min-width: 70vw;
+    }
+    .file-share-head-bar{
+        display: grid;
+        gap: 1rem;
+    }
+
+    .username-dialog-box{
+        width: 90vw;
+        font-size: 22px;
+        max-height: 70vh;
+    }
+
+    .dialogbox-footer{
+        font-size: 2px;
+        margin-top: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .uploading-message-container{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+
+
+@media screen and (width<500px){
+    .username-dialog-box{
+        font-size: 20px;
+    }
+    
+    .file-share-card{
+        min-width: 90vw;
+    }
+}
+
+.upload-btn , .choose-file-btn {
+    background-color: #ea4335;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.upload-cancel-btn-container{
+    display: grid;
+    gap:1.5vh;
+    font-size: 18px;
+}
+
+.cancel-btn {
+    background-color: #ea4335;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.upload-btn:disabled , .cancel-btn:disabled{
+    background-color: #b71c1c;
+}
+
+
+.upload-btn:disabled:active , .cancel-btn:disabled:active {
+    background-color: #b71c1c;
+    animation: trigger linear alternate 500ms;
+}
+
+.upload-btn:active , .cancel-btn:not(:disabled):active{
+    transform: scale(0.95);
+}
+
+@keyframes trigger {
+    0%{
+        transform: translateX(0);
+    }
+    10%{
+        transform: translateX(10px);
+    }
+    20%{
+        transform: translateX(-10px);
+    }
+    30%{
+        transform: translateX(10px);
+    }
+    40%{
+        transform: translateX(0px);
+    }
+}
+
+.progress-bar-container {
+    display: grid;
+    align-items: center;
+}
+
+progress {
+    flex: 1;
+    margin-right: 10px;
+    height: 20px;
+}
+
+/* .file-preview{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    max-width: 55vw;
+    overflow: hidden;
+    object-fit: contain;
+    justify-content: space-around;
+    align-items: center;
+    object-fit: cover;
+} */
+
+.file-upload-container-body{
+    padding: 0.5em;
+    grid-area: body;
+    border-top: 0;
+    border-left: 0.2px dashed rgb(2, 2, 2);
+    border-right: 0.2px dashed rgb(2, 2, 2);
+    border-bottom: 0.2px dashed rgb(2, 2, 2);
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    overflow: auto;
+    overflow-wrap: break-word;
+}
+
+
+.file-preview{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    max-width: 55vw;
+    overflow: hidden;
+    justify-content: space-around;
+    align-items: center;
+    object-fit: cover;
+}
+
+.file-preview img{
+    margin-top: 1.5rem;
+    max-width: 20vw;
+    max-height: 30vh;
+    object-fit: cover;
+}
+
+.rename-remove-file{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.image-rename-controller{
+    margin-top: 3px;
+    display: flex;
+    gap:1vw;
+}
+
+.image-rename-controller button{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: #ea4335;
+}
+
+#file-icon-display{
+}
+
+.file-item{
+    display: grid;
+    justify-content: center;
+    align-self: center;
+    gap:1em;
+    overflow: hidden;
+}
+
+
+.file-uploading-wait-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap:3vh;
+    user-select: none;
+}
+
+.file-uploading-wait-container span{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+
+.please-wait-container div span{
+    /* background-image: linear-gradient(
+        -225deg,
+        #231557 0%,
+        #44107a 29%,
+        #ff1361 67%,
+        #fff800 100%
+    );
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    background-size: 200% auto; */
+
+    font-family: 'Alfa Slab One', cursive;
+    position: relative;
+    display: inline-block;
+    color: #5668c5;
+    text-transform: uppercase;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+@keyframes waviy {
+    0%,40%,100% {
+        transform: translateY(0)
+    }
+    20% {
+        transform: translateY(-10px)
+    }
+}
+
+
+.updated-note-container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 3vh;
+}
+
+
+.password-dialog{
+    padding-top: 5px;
+    display: flex;
+    place-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.change-username-span{
+    color: #1976d2;
+    cursor: pointer;
+    margin: 0 0 0.2rem 1rem;
+}
+
+.change-username-span:hover{
+    text-decoration: underline;
+}

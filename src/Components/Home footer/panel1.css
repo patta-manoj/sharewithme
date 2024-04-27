@@ -1,0 +1,36 @@
+.panel-1-container{
+    padding: 20px 10px 0;
+}
+
+.options-container{
+    width: auto;
+}
+
+.panel-1-inner_container-1 span{
+    font-size: 20px;
+    color: #323232;
+    padding: 0 0 10px;
+    font-weight: 600;
+}
+
+.panel-1-inner_container-1 ul{
+    user-select: none;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.panel-1-inner_container-1 ul li{
+    padding-top: 5px;
+}
+
+.panel-1-inner_container-1 ul li span{
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 450;
+}
+
+.panel-1-inner_container-1 ul li span:hover{
+    color:  #3f51b5;
+    text-decoration: underline 1px #3f51b5;
+}

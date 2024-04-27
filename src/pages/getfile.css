@@ -1,0 +1,55 @@
+.file-search-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 1px hidden transparent;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.file-search-container .file-search-card{
+    margin-top: -10vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#search-icon:active{
+    transform: scale(0.9);
+}
+
+.file-search-container .click-here-to-open-file{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.click-here-to-open-file a{
+    text-decoration: none;
+}
+
+.click-here-to-open-file button{
+    transition: all 0s ease-in-out;
+}
+
+.click-here-to-open-file a:active{
+    text-decoration: none;
+    color: rgba(14, 14, 166, 0.575);
+}
+
+.file-found{
+    display: none;
+}
+
+.error-message{
+    margin-top: -12vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-message .message-not-found{
+    margin-top: -5vh;
+}
